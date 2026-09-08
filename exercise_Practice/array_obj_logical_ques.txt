@@ -1,0 +1,548 @@
+Yes 👍 Since you want to **practice logic**, not just memorize methods, here are questions where you have to decide **which array/object method to use yourself**.
+
+I’ll keep them based only on the topics you gave me: **Objects, Arrays, Symbol, push/pop, shift/unshift, indexOf, includes, slice, splice, join, reverse, concat, spread, flat, Array.isArray, Array.from, Array.of.**
+
+# 🟢 EASY — Logical Questions
+
+### 1. Find a Product
+
+You have:
+
+```js
+const products = ["Laptop", "Mobile", "Tablet", "Watch"];
+```
+
+Write a program that checks whether `"Tablet"` exists in the array.
+
+If it exists, print:
+
+```text
+Tablet is available
+```
+
+Otherwise:
+
+```text
+Tablet is not available
+```
+
+---
+
+### 2. Add a New Product
+
+```js
+const products = ["Laptop", "Mobile", "Tablet"];
+```
+
+A new product `"Watch"` has arrived.
+
+Add it to the **end** of the array and print the updated array.
+
+**Think:** Which method?
+
+---
+
+### 3. Remove Sold Product
+
+```js
+const products = ["Laptop", "Mobile", "Tablet", "Watch"];
+```
+
+The last product has been sold.
+
+Remove it and print the remaining products.
+
+---
+
+### 4. VIP Customer
+
+```js
+const customers = ["Ali", "Sara", "Ayesha", "Usama"];
+```
+
+A VIP customer named `"Fatima"` should be added **before everyone else**.
+
+Add her to the beginning.
+
+---
+
+### 5. Find Product Position
+
+```js
+const products = ["Laptop", "Mobile", "Tablet", "Watch"];
+```
+
+Find the position/index of `"Watch"`.
+
+Print:
+
+```text
+Watch is at index 3
+```
+
+---
+
+### 6. Student Object
+
+Create:
+
+```js
+const student = {
+    name: "Ayesha",
+    age: 20,
+    course: "JavaScript"
+};
+```
+
+Print:
+
+```text
+Ayesha is learning JavaScript
+```
+
+You need to get both values from the object.
+
+---
+
+# 🟡 MEDIUM — Think Before Coding
+
+### 7. Remove Duplicate
+
+You have:
+
+```js
+const numbers = [1, 2, 2, 3, 4, 4, 5];
+```
+
+Create a new array that contains:
+
+```text
+[1, 2, 3, 4, 5]
+```
+
+**Don't use methods that you haven't learned yet.**
+
+Try to solve this using the concepts you already know.
+
+---
+
+### 8. Replace a Product
+
+```js
+const products = [
+    "Laptop",
+    "Mobile",
+    "Tablet",
+    "Watch"
+];
+```
+
+The `"Tablet"` product is discontinued.
+
+Replace it with `"Camera"`.
+
+Expected:
+
+```text
+["Laptop", "Mobile", "Camera", "Watch"]
+```
+
+---
+
+### 9. Remove Middle Products
+
+```js
+const products = [
+    "Laptop",
+    "Mobile",
+    "Tablet",
+    "Watch",
+    "Camera"
+];
+```
+
+Remove:
+
+```text
+Mobile
+Tablet
+```
+
+Expected:
+
+```text
+["Laptop", "Watch", "Camera"]
+```
+
+---
+
+### 10. Create a Featured List
+
+```js
+const products = [
+    "Laptop",
+    "Mobile",
+    "Tablet",
+    "Watch",
+    "Camera"
+];
+```
+
+Create a **new array** containing only:
+
+```text
+["Mobile", "Tablet", "Watch"]
+```
+
+The original array must remain unchanged.
+
+---
+
+### 11. Shopping Cart
+
+```js
+const cart = ["Laptop", "Mouse", "Keyboard"];
+```
+
+The user:
+
+1. Adds `"Headphones"`
+2. Removes `"Laptop"`
+3. Adds `"USB Cable"` at the beginning
+
+Print the final cart.
+
+Expected:
+
+```text
+["USB Cable", "Mouse", "Keyboard", "Headphones"]
+```
+
+---
+
+### 12. Product Names as One String
+
+```js
+const products = ["Laptop", "Mobile", "Watch", "Shoes"];
+```
+
+Convert them into:
+
+```text
+Laptop | Mobile | Watch | Shoes
+```
+
+---
+
+### 13. Reverse Recently Viewed
+
+```js
+const recentlyViewed = [
+    "Laptop",
+    "Mobile",
+    "Watch",
+    "Shoes"
+];
+```
+
+The newest product should appear first.
+
+Reverse the array.
+
+---
+
+### 14. Merge Categories
+
+```js
+const electronics = ["Laptop", "Mobile"];
+const accessories = ["Mouse", "Keyboard"];
+```
+
+Create a new array:
+
+```text
+["Laptop", "Mobile", "Mouse", "Keyboard"]
+```
+
+**Do not modify either original array.**
+
+---
+
+# 🔴 HARD — Real Logical Problems
+
+### 15. Product Inventory
+
+You have:
+
+```js
+const products = [
+    {
+        name: "Laptop",
+        price: 120000,
+        quantity: 5
+    },
+    {
+        name: "Mobile",
+        price: 50000,
+        quantity: 10
+    },
+    {
+        name: "Watch",
+        price: 15000,
+        quantity: 0
+    }
+];
+```
+
+A customer wants to buy the `"Watch"`.
+
+Your program should:
+
+1. Check whether `"Watch"` exists.
+2. Find its position.
+3. Check its quantity.
+4. If quantity is `0`, print:
+
+```text
+Watch is out of stock
+```
+
+---
+
+### 16. Replace Outdated Product
+
+```js
+const products = [
+    "Dell Laptop",
+    "HP Laptop",
+    "Old Mobile",
+    "Samsung Watch"
+];
+```
+
+`"Old Mobile"` is no longer available.
+
+Replace it with:
+
+```text
+"iPhone"
+```
+
+Expected:
+
+```text
+[
+    "Dell Laptop",
+    "HP Laptop",
+    "iPhone",
+    "Samsung Watch"
+]
+```
+
+---
+
+### 17. Featured Products
+
+```js
+const products = [
+    "Laptop",
+    "Mobile",
+    "Tablet",
+    "Watch",
+    "Camera",
+    "Headphones"
+];
+```
+
+The website's featured section can only show **3 products**.
+
+Create a new array containing:
+
+```text
+Laptop
+Mobile
+Tablet
+```
+
+The original array should remain unchanged.
+
+---
+
+### 18. Remove Unavailable Products
+
+```js
+const products = [
+    "Laptop",
+    "Mobile",
+    "Tablet",
+    "Watch",
+    "Camera"
+];
+```
+
+The `"Mobile"` and `"Tablet"` products are unavailable.
+
+Remove both.
+
+Expected:
+
+```text
+["Laptop", "Watch", "Camera"]
+```
+
+---
+
+### 19. Category Combination
+
+```js
+const menProducts = ["Shirt", "Jeans", "Shoes"];
+const womenProducts = ["Dress", "Bag", "Heels"];
+```
+
+Create a new array containing **all products**.
+
+Then reverse the final array.
+
+---
+
+### 20. Nested Product Categories
+
+You receive data like this:
+
+```js
+const categories = [
+    ["Laptop", "Mobile"],
+    ["Shirt", "Jeans"],
+    ["Shoes", ["Sneakers", "Boots"]]
+];
+```
+
+Your task:
+
+1. Flatten the entire array.
+2. Check whether `"Boots"` exists.
+3. Find the index of `"Boots"`.
+4. Convert all products into one string separated by `" | "`.
+
+---
+
+# 🔥 CHALLENGE QUESTIONS
+
+These require you to combine several concepts.
+
+### 21. Shopping Cart Challenge ⭐
+
+```js
+const cart = [
+    "Laptop",
+    "Mouse",
+    "Keyboard",
+    "Headphones",
+    "USB Cable"
+];
+```
+
+Perform these operations:
+
+1. Remove `"Mouse"` and `"Keyboard"`.
+2. Add `"Monitor"` at the end.
+3. Add `"Webcam"` at the beginning.
+4. Reverse the cart.
+5. Convert it into a string using `" | "`.
+
+Don't use a separate array manually. Perform the operations on the existing cart.
+
+---
+
+### 22. Product Collection Challenge ⭐⭐
+
+```js
+const products = [
+    "Laptop",
+    "Mobile",
+    "Tablet",
+    "Watch",
+    "Camera",
+    "Headphones"
+];
+```
+
+The website needs:
+
+* **First 3 products** → Featured Products
+* **Last 3 products** → New Arrivals
+
+Create both arrays using `slice()`.
+
+The original `products` array must not change.
+
+---
+
+### 23. Array Data Conversion ⭐⭐
+
+You receive:
+
+```js
+const username = "Ayesha";
+```
+
+Your program should:
+
+1. Convert the username into an array of characters.
+2. Check that the result is actually an array.
+3. Print the array.
+
+Expected:
+
+```text
+["A", "y", "e", "s", "h", "a"]
+```
+
+---
+
+### 24. Multiple Values → Array ⭐⭐
+
+You have:
+
+```js
+const productName = "Nike Shoes";
+const price = 15000;
+const quantity = 3;
+```
+
+Create an array containing all three values.
+
+Then:
+
+1. Print the array.
+2. Check whether it is an array.
+3. Reverse it.
+
+---
+
+### 25. Final Boss 👑
+
+You have:
+
+```js
+const store = [
+    ["Laptop", "Mobile"],
+    ["Shirt", "Jeans"],
+    ["Shoes", ["Sneakers", "Boots"]],
+    ["Watch", ["Smart Watch", "Digital Watch"]]
+];
+```
+
+Your program needs to:
+
+1. Flatten the entire store.
+2. Check if `"Boots"` exists.
+3. Find the index of `"Boots"`.
+4. Add `"Camera"` at the end.
+5. Remove `"Laptop"`.
+6. Reverse the products.
+7. Join everything using `" | "`.
+
+Final output should be **one string**.
+
+---

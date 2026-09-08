@@ -46,3 +46,18 @@ const product_Collection_Using_Symbol = {
 }
 
 console.log(symbolReviews)
+
+
+// There are two ways to create an object in javascript.
+// 1. Object literal method
+const obj1 = {
+    key : "value",
+}
+console.log(obj1)
+
+// 2. Object constructor method or singleton method
+const obj2 = new Object();
+obj2.key = "value";
+obj2.name = "object constructor method"
+obj2.age = 20;
+console.log(obj2)
