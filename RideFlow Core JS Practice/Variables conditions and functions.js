@@ -184,3 +184,13 @@ const calculateAverageDelay = ()=>{
 }
 
 console.log(calculateAverageDelay());
+
+// same question solved by reduce(){} arrya method to sum arrays value only 
+
+let delayTimes02 = [5, 10, 0, 15];
+
+let totalSum = delayTimes02.reduce((total, number) => {
+    return total + number;
+}, 0);
+
+console.log(totalSum); // 30
