@@ -194,3 +194,61 @@ let totalSum = delayTimes02.reduce((total, number) => {
 }, 0);
 
 console.log(totalSum); // 30
+
+
+// Level 03 Arrays aur objects
+
+// Q11. Employees ke naam print karo Is array ke har employee ka naam print karo:
+// hmny map use kiya h but hmaein function k andr return bhi lagana hoga taky function proper map return kry
+const employees = [
+    {
+       name: "Ali",
+       pickedUp: true
+    },
+    { 
+        name: "Sara",
+        pickedUp: false
+    },
+    {
+         name: "Ahmed", 
+         pickedUp: true
+    } 
+];
+
+const getEmployeeNames = ()=>{
+    return employees.map((employeeName)=>{
+        return employeeName.name
+    })
+}
+
+console.log(getEmployeeNames());
+
+// Q12. Sirf picked-up employees
+//  Usi array mein se sirf un employees ko nikaalo jinka pickedUp true hai.
+//  Hint: filter() aur boolean condition. or phr us sy map lga k names bhi nkal lo qnky filter sirf validate kry ga element ko.or map direct return kry ga value.
+
+const getPickedUpEmployee = () =>
+    employees.filter((employee)=>{
+        return employee.pickedUp ;
+    }).map((employeeName) => {
+        return employeeName.name
+    })
+
+console.log(getPickedUpEmployee());
+
+
+// Q13. Employee search 
+// Employee list mein se kisi particular ID wala employee dhoondo.
+//  Hint: find() use karo. 
+// Socho agar ID na mile toh result kya hoga.
+
+const searchId = null ;
+
+const findEmployeeId = () => {
+    employees.find(employees.id === searchId)
+    if(!searchId){
+        return "Employee ID not Found"
+    }
+};
+
+console.log(findEmployeeId());
