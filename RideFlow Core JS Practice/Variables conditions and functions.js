@@ -253,39 +253,39 @@ const findEmployeeId = () => {
 
 console.log(findEmployeeId());
 
-const employees = [
-  { id: 101, name: "Ali", pickedUp: true },
-  { id: 102, name: "Sara", pickedUp: false },
-  { id: 103, name: "Ahmed", pickedUp: true }
-];
+// const employees = [
+//   { id: 101, name: "Ali", pickedUp: true },
+//   { id: 102, name: "Sara", pickedUp: false },
+//   { id: 103, name: "Ahmed", pickedUp: true }
+// ];
 
-let searchId = null;
+// let searchId = null;
 
-function searchEmployee(id) {
-  searchId = Number(id);
+// function searchEmployee(id) {
+//   searchId = Number(id);
 
-  const employee = employees.find(
-    employee => employee.id === searchId
-  );
+//   const employee = employees.find(
+//     employee => employee.id === searchId
+//   );
 
-  if (employee) {
-    console.log("Employee Found:", employee);
-  } else {
-    console.log("Employee Not Found");
-  }
-}
+//   if (employee) {
+//     console.log("Employee Found:", employee);
+//   } else {
+//     console.log("Employee Not Found");
+//   }
+// }
 
-searchEmployee(102);
-
-
-Output:
-Employee Found: { id: 102, name: "Sara", pickedUp: false }
+// searchEmployee(102);
 
 
-Ab flow samjho
-1. searchId = null — abhi koi ID search nahi hui.
-2. searchEmployee(102) — manager ki enter ki hui ID function ko milti hai.
-3. searchId = Number(id) — searchId ki value 102 ho jati hai.
-4. find() har employee ki id ko searchId se compare karta hai.
-5. Jis employee ki ID 102 match karti hai, uska object return ho jata hai.
-// Yaad rakho: null sirf initial value hai. Jab tak tum usay update nahi karogi, woh null hi rahega. Aur agar input se ID string "102" aaye, to Number() usay number 102 mein convert karta hai taake comparison sahi ho.
+// Output:
+// Employee Found: { id: 102, name: "Sara", pickedUp: false }
+
+
+// // Ab flow samjho
+// // 1. searchId = null — abhi koi ID search nahi hui.
+// // 2. searchEmployee(102) — manager ki enter ki hui ID function ko milti hai.
+// // 3. searchId = Number(id) — searchId ki value 102 ho jati hai.
+// // 4. find() har employee ki id ko searchId se compare karta hai.
+// // 5. Jis employee ki ID 102 match karti hai, uska object return ho jata hai.
+// // Yaad rakho: null sirf initial value hai. Jab tak tum usay update nahi karogi, woh null hi rahega. Aur agar input se ID string "102" aaye, to Number() usay number 102 mein convert karta hai taake comparison sahi ho.
