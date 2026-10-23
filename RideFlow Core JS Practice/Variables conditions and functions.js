@@ -203,16 +203,44 @@ console.log(totalSum); // 30
 const employees = [
     {
        name: "Ali",
-       pickedUp: true
+       pickedUp: true,
+       pickupStatus: "picked-up"
     },
     { 
         name: "Sara",
-        pickedUp: false
+        pickedUp: false,
+        pickupStatus: "no-show"
     },
     {
          name: "Ahmed", 
-         pickedUp: true
-    } 
+         pickedUp: true,
+         pickupStatus: "picked-up"
+    }, 
+    {
+         name: "Ayesha", 
+         pickedUp: false,
+         pickupStatus: "no-show"
+    },
+    {
+         name: "Hammad", 
+         pickedUp: false,
+         pickupStatus: "no-show"
+    },
+    {
+         name: "Zain", 
+         pickedUp: false,
+         pickupStatus: "no-show"
+    },
+    {
+         name: "Hira", 
+         pickedUp: true,
+         pickupStatus: "picked-up"
+    },
+    {
+         name: "Kainat", 
+         pickedUp: true,
+         pickupStatus: "picked-up"
+    }  
 ];
 
 const getEmployeeNames = ()=>{
@@ -252,7 +280,7 @@ const findEmployeeId = () => {
 };
 
 console.log(findEmployeeId());
-
+// another method of which is correcct from gpt
 // const employees = [
 //   { id: 101, name: "Ali", pickedUp: true },
 //   { id: 102, name: "Sara", pickedUp: false },
@@ -289,3 +317,47 @@ console.log(findEmployeeId());
 // // 4. find() har employee ki id ko searchId se compare karta hai.
 // // 5. Jis employee ki ID 102 match karti hai, uska object return ho jata hai.
 // // Yaad rakho: null sirf initial value hai. Jab tak tum usay update nahi karogi, woh null hi rahega. Aur agar input se ID string "102" aaye, to Number() usay number 102 mein convert karta hai taake comparison sahi ho.
+
+
+
+
+// Q14. Employee names ko ek string mein joro Names ko is format mein combine karo: Ali | Sara | Ahmed. 
+// Hint: Pehle names ki array banao ya extract karo,
+//  phir join(" | ") use karo.
+
+
+const employeeNamesFormat = ()=> 
+    employees.map((employee)=>
+    employee.name).join(" | ") ;
+
+console.log(employeeNamesFormat());
+
+// Q15. No-show count
+//  Employees ki list mein count karo ke kitne employees ka status "no-show" hai.
+//  Hint: filter() ke baad .length, ya loop mein counter increment karo.
+
+const countEmployeePickupStatus = ()=>{
+    return employees.filter((noshowStatus) => noshowStatus.pickupStatus === "no-show" ) ;
+}
+
+console.log(countEmployeePickupStatus());
+
+// Q16. Duplicate employee IDs 
+// IDs ki array di gayi hai:
+//  [101, 102, 101, 103, 102]. Unique IDs ki array banao.
+//  Hint: Set ke baare mein socho, ya har ID ko check karo ke woh pehle aa chuki hai ya nahi.
+
+// Working without usind set.
+// inculed() check kry g k id hay yh nahi uniqueid walay array m employeeIDs
+const employeeIDs = [101, 102, 101, 103, 102];
+const uniqueIDs = [] ; 
+const removeDuplicateID = ()=>{
+    for(let i = 0; i < employeeIDs.length; i++ ){
+        if(!uniqueIDs.includes(employeeIDs[i])){
+            uniqueIDs.push(employeeIDs[i]);
+        }
+    }
+     return uniqueIDs ;
+}
+
+console.log(removeDuplicateID());
