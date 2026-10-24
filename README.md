@@ -141,7 +141,10 @@ Hint: String ke liye trim() aur condition use karo.
 
 Q23. Valid passenger count
 Passenger count valid tab hai jab woh number ho, zero se zyada ho aur allowed capacity se exceed na kare.
-Hint: Multiple conditions ko && se combine karne ke baare mein socho.
+Hint: Multiple conditions  ko && se combine karne ke baare mein socho.Tumhein check karna hai:
+- passengerCount number ho. yh typeof bhi use krskti ho.
+- passengerCount > 0 ho.
+- passengerCount <= capacity ho.
 
 Q24. Missing employee ID
 Function ko employee ID milti hai. Missing, null, ya invalid ID ki situation handle karo.
