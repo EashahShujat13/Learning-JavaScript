@@ -86,6 +86,7 @@ IDs ki array di gayi hai: [101, 102, 101, 103, 102]. Unique IDs ki array banao.
 Hint: Set ke baare mein socho, ya har ID ko check karo ke woh pehle aa chuki hai ya nahi.
 
 Level 4 — Searching, sorting aur data processing
+
 Q17. Sabse zyada pickup delay
 Delays [8, 15, 3, 20, 11] mein se maximum delay find karo.
 Hint: Math.max() ya loop mein current maximum store karo.
@@ -101,6 +102,33 @@ Hint: sort() use karo. Agar objects hain, toh name property compare karni hogi.
 Q20. Longest route find karo
 Routes ke objects mein distance property di gayi hai. Sabse lambi route find karo.
 Hint: find() aur filter() ka purpose samjho. Maximum value dhoondhne ke liye reduce() bhi useful hai.
+const routes = [
+    {
+        routeId: 101,
+        routeName: "North Route",
+        distance: 25
+    },
+    {
+        routeId: 102,
+        routeName: "City Route",
+        distance: 45
+    },
+    {
+        routeId: 103,
+        routeName: "Airport Route",
+        distance: 32
+    },
+    {
+        routeId: 104,
+        routeName: "School Route",
+        distance: 60
+    },
+    {
+        routeId: 105,
+        routeName: "Office Route",
+        distance: 40
+    }
+];
 
 Q21. Search by name
 Employee ka naam search input mein diya gaya hai. List mein matching employee dhoondo, case-insensitive search ke saath.
