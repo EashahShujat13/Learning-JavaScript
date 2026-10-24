@@ -82,7 +82,13 @@ const employees = [
          name: "Kainat", 
          pickedUp: true,
          pickupStatus: "picked-up"
-    }  
+    },
+    {
+         name: "Anam", 
+         pickedUp: false,
+         pickupStatus: "no-show"
+    },
+
 ];
 
 // yh syntx hay string ko compare krny ka sort may .
@@ -96,3 +102,82 @@ const getNamesAlphabatically = () => {
 };
 
 console.log(getNamesAlphabatically());
+
+
+// // Q20. Longest route find karo
+//  Routes ke objects mein distance property di gayi hai.
+//   Sabse lambi route find karo. 
+//   Hint: find() aur filter() ka purpose samjho.   
+//   Maximum value dhoondhne ke liye reduce() bhi useful hai.
+
+const routes = [
+    {
+        routeId: 101,
+        routeName: "North Route",
+        distance: 25
+    },
+    {
+        routeId: 102,
+        routeName: "City Route",
+        distance: 45
+    },
+    {
+        routeId: 103,
+        routeName: "Airport Route",
+        distance: 32
+    },
+    {
+        routeId: 104,
+        routeName: "School Route",
+        distance: 60
+    },
+    {
+        routeId: 105,
+        routeName: "Office Route",
+        distance: 40
+    }
+];
+
+const findLongestRoute = ()=>{
+    return routes.reduce((acc,current) =>acc.distance > current.distance ? acc : current )
+}
+
+console.log(findLongestRoute());
+
+// Q21. Search by name Employee ka naam search input mein diya gaya hai.
+//  List mein matching employee dhoondo, case-insensitive search ke saath.
+//  Hint: toLowerCase() se dono strings ko normalize karo, phir includes() ya find() use karo.
+
+ 
+// i done this without find and its alsso perfect . 
+
+const searchEmployee = (searchEmployeeName)=>{
+  return employees.filter((employeeName)=>{
+   return employeeName.name
+   })
+}
+console.log(searchEmployee(sara));
+
+// now lets do it with inculde to check wheter the input value machtes the name we have in array .
+
+const checkSearchEmployeeNameWithInclude = (searchEmployee)=>{
+    return employees.filter((employeeName)=>{
+     return employeeName.name.toLowerCase().includes(searchEmployee.toLowerCase())
+    })
+}
+
+console.log(checkSearchEmployeeName("A")); 
+
+// theres an exception that sara will also written in output cuz it has "a" .
+// but if we want that we search  "a" so only those names comes which starting letter is "a".
+// for that theres a javascrippt method startsWith() similarly like include but output is different.
+
+const checkSearchEmployeeNameBy_startsWith = (searchEmployee)=>{
+    return employees.filter((employeeName)=>{
+     return employeeName.name.toLowerCase().startsWith(searchEmployee.toLowerCase())
+    })
+}
+
+console.log(checkSearchEmployeeNameBy_startsWith("A")); 
+
+
