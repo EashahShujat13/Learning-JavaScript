@@ -149,6 +149,16 @@ Hint: Multiple conditions  ko && se combine karne ke baare mein socho.Tumhein ch
 Q24. Missing employee ID
 Function ko employee ID milti hai. Missing, null, ya invalid ID ki situation handle karo.
 Hint: null, undefined aur falsy values ek jaisi nahi hotin. Decide karo ke valid ID ka rule kya hai.
+undefined, null, 0, negative number aur non-number reject honge. conditions use krsti ho or && yh || bhi  .
+Pehle check hoga ke ID valid positive number hai.
+Agar ID invalid hai, function "Invalid employee ID" return karega.
+Agar ID valid hai, .find() employees array mein matching ID search karega.
+Agar employee nahi mila, "Employee not found" return hoga.
+Agar employee mil gaya, uska object return hoga.const employees = [
+    { id: 101, name: "Ali" },
+    { id: 102, name: "Sara" },
+    { id: 103, name: "Ahmed" }
+];
 
 Q25. Duplicate assignment rokna
 Check karo ke employee pehle se kisi driver ke saath assigned toh nahi.
