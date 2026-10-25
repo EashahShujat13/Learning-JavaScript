@@ -162,13 +162,20 @@ Agar employee mil gaya, uska object return hoga.const employees = [
 
 Q25. Duplicate assignment rokna
 Check karo ke employee pehle se kisi driver ke saath assigned toh nahi.
-Hint: Existing assignments mein employee ki ID search karo.
+Hint: Existing assignments mein employee ki ID search karo.some() . const assignments = [
+    { employeeId: 101, driverName: "Ali" },
+    { employeeId: 102, driverName: "Ahmed" },
+    { employeeId: 103, driverName: "Usman" }
+];
 
 Q26. Safe division
 Average delay calculate karte waqt empty array ya zero count ki wajah se invalid result aane se roko.
-Hint: Calculation se pehle input validate karo.
+Hint: Calculation se pehle input validate karo.delays.reduce() saare delays ko add karta hai.
+delays.length batata hai ke array mein kitni entries hain.
+count un entries ki tadaad store karta hai.
 
 Level 6 — React components aur state logic
+
 Q27. Employee card component
 Ek component banao jo employee ka naam, ID aur pickup status show kare.
 Hint: Parent se data receive karne ke liye props use hote hain.
