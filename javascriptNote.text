@@ -1,0 +1,24 @@
+Learn JS Concepts In This :
+
+VARIABLES:
+
+There are mainly 3 types of Variables .
+let : It can be declared again and changes its value .
+var (not commonly used)
+const : It cant be declared again and value remain constant .
+
+DATA TYPES :
+
+Numbers:
+BigInt:(identified by n at the end of numbers or claculation).
+String:
+Boolean:
+Null,Undefine :
+Objects:
+typeof:(tell the type of operand )(typeof null gives object, typeof Math gives output object, typof alert gives output Function .
+
+Operators :
++ - / * % ** ! == === || && .
+
+
+
